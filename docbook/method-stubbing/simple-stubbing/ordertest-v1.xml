@@ -15,18 +15,18 @@ class ShoppingCartTest extends PHPUnit_Framework_TestCase
 
 	public function setUp()
 	{
-		$item1 = Phake::mock('Item');
-		$item2 = Phake::mock('Item');
-		$item3 = Phake::mock('Item');
+		$this->item1 = Phake::mock('Item');
+		$this->item2 = Phake::mock('Item');
+		$this->item3 = Phake::mock('Item');
 
-		Phake::when($item1)->getPrice()->thenReturn(100);
-		Phake::when($item2)->getPrice()->thenReturn(200);
-		Phake::when($item3)->getPrice()->thenReturn(300);
+		Phake::when($this->item1)->getPrice()->thenReturn(100);
+		Phake::when($this->item2)->getPrice()->thenReturn(200);
+		Phake::when($this->item3)->getPrice()->thenReturn(300);
 
 		$this->shoppingCart = new ShoppingCart();
-		$this->shoppingCart->addItem($item1);
-		$this->shoppingCart->addItem($item2);
-		$this->shoppingCart->addItem($item3);
+		$this->shoppingCart->addItem($this->item1);
+		$this->shoppingCart->addItem($this->item2);
+		$this->shoppingCart->addItem($this->item3);
 	}
 
 	public function testGetSub()
