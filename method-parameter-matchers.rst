@@ -307,7 +307,7 @@ Custom Parameter Matchers
 =========================
 
 An alternative to using argument capturing is creating custom matchers. All parameter matchers implement the interface
-``Phake_Matchers_IArgumentMatcher``. You can create custom implementations of this interface. This is especially useful
+``Phake\Matchers\IArgumentMatcher``. You can create custom implementations of this interface. This is especially useful
 if you find yourself using a similar capturing pattern over and over again. If I were to rewriting the test above using
 a customer argument matcher it would look something like this.
 
